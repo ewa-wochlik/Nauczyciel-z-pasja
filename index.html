@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testy dla uczniów</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+    header {
+      background: #2d89ef;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #1b5fab;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+    nav a:hover {
+      background: #0e3e73;
+    }
+    section {
+      padding: 20px;
+      display: none;
+    }
+    section.active {
+      display: block;
+      background: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #ddd;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Testy dla uczniów</h1>
+</header>
+
+<nav>
+  <a href="#" onclick="showTab('tab1')">Strona główna</a>
+  <a href="#" onclick="showTab('tab2')">Test 1</a>
+  <a href="#" onclick="showTab('tab3')">Test 2</a>
+  <a href="#" onclick="showTab('tab4')">Materiały</a>
+  <a href="#" onclick="showTab('tab5')">Kontakt</a>
+</nav>
+
+<section id="tab1" class="active">
+  <h2>Witaj!</h2>
+  <p>To jest strona z testami i materiałami dla uczniów.</p>
+</section>
+
+<section id="tab2">
+  <h2>Liczby binarne</h2>
+  <p><a href="https://www.testportal.pl/test.html?t=VwazMnbnzhyS">Rozpocznij test</a></p>
+</section>
+
+
+
+
+<footer>
+  <p>© 2025 Ewa Wochlik</p>
+</footer>
+
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(tabId).classList.add("active");
+  }
+</script>
+
+</body>
+</html>
